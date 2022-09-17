@@ -17,7 +17,7 @@ export function Home() {
   }
 
   useEffect(() => {
-    fetch(`${process.env.BASE_URL}/games`)
+    fetch('http://192.168.0.8:3333/games')
       .then(response => response.json())
       .then(data => setGames(data))
   }, [])
