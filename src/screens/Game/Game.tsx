@@ -22,7 +22,7 @@ export function Game() {
   }
 
   useEffect(() => {
-    fetch(`http://192.168.0.8:3333/games/${game.id}/ads`)
+    fetch(`${process.env.BASE_URL}/games/${game.id}/ads`)
       .then(response => response.json())
       .then(data => setDuos(data))
   }, [])
